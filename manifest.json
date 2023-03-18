@@ -1,6 +1,6 @@
 {
-    "name": "webrtc_tutorial_main_fix",
-    "short_name": "webrtc_tutorial_main_fix",
+    "name": "webrtc_firebase",
+    "short_name": "webrtc_firebase",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
