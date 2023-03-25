@@ -1,6 +1,6 @@
 {
-    "name": "webrtc_message_test",
-    "short_name": "webrtc_message_test",
+    "name": "webrtc_socket_client",
+    "short_name": "webrtc_socket_client",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
