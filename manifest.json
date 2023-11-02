@@ -1,6 +1,6 @@
 {
-    "name": "dash_develop_site",
-    "short_name": "dash_develop_site",
+    "name": "buurtwag",
+    "short_name": "buurtwag",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
