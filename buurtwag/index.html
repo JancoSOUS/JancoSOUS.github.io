@@ -2,6 +2,58 @@
 <html>
 
 <head>
+  <style>
+    .loading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .linear-loader {
+      width: 100px;
+      height: 10px;
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .linear-loader .bar {
+      height: 100%;
+      width: 100%;
+      background-color: #00AD87;
+      animation: scroll 2s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .app-icon {
+      width: 300px;
+      height: 300px;
+      margin-bottom: 20px;
+      background-image: url('/buurtwag/assets/assets/buurtwag.png');
+      background-size: cover;
+      border-radius: 50%;
+    }
+
+    .loading-text {
+      font-size: 18px;
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -35,13 +87,20 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2625277815";
+    const serviceWorkerVersion = "4259297930";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 
 <body>
+  <div class="loading">
+    <div class="app-icon"></div>
+    <div class="linear-loader">
+      <div class="bar"></div>
+    </div>
+    <div class="loading-text">Laai tans...</div>
+  </div>
   <script>
     window.addEventListener('load', function (ev) {
       // Download main.dart.js
@@ -71,6 +130,12 @@
         var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
       });
     }
+  </script>
+  <script>
+    window.addEventListener("flutter-first-frame", function () {
+      var element = document.getElementsByClassName("loading");
+      element[0].parentNode.removeChild(element[0]);
+    });
   </script>
 </body>
 
