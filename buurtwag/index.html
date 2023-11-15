@@ -145,7 +145,7 @@
         // ADD THIS LINE
         // navigator.serviceWorker.register('/buurtwag/flutter_service_worker.js?v=' + serviceWorkerVersion);
 
-        navigator.serviceWorker.register('flutter_service_worker.js').then(registration => {
+        navigator.serviceWorker.register('/buurtwag/flutter_service_worker.js').then(registration => {
           firebase.messaging().useServiceWorker(registration)
         })
       });
