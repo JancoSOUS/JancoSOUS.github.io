@@ -71,7 +71,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Buurtwag">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -103,7 +103,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2241300335";
+    const serviceWorkerVersion = "3668598327";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -132,18 +132,18 @@
       });
     });
   </script>
-  <script src="main.dart.js" type="application/javascript"></script>
+  <script src="/buurtwag/main.dart.js" type="application/javascript"></script>
   <script>
     if ('serviceWorker' in navigator) {
       // Service workers are supported. Use them.
       window.addEventListener('load', function () {
         // ADD THIS LINE
-        navigator.serviceWorker.register('firebase-messaging-sw.js');
+        navigator.serviceWorker.register('/buurtwag/firebase-messaging-sw.js');
 
         // Wait for registration to finish before dropping the <script> tag.
         // Otherwise, the browser will load the script multiple times,
         // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        var serviceWorkerUrl = '/buurtwag/flutter_service_worker.js?v=' + serviceWorkerVersion;
       });
     }
   </script>
@@ -153,7 +153,7 @@
       element[0].parentNode.removeChild(element[0]);
     });
   </script>
-  <script defer src="main.dart.js" type="application/javascript"></script>
+  <script defer src="/buurtwag/main.dart.js" type="application/javascript"></script>
 </body>
 
 </html>
