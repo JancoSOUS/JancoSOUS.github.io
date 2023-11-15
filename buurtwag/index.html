@@ -137,13 +137,17 @@
     if ('serviceWorker' in navigator) {
       // Service workers are supported. Use them.
       window.addEventListener('load', function () {
-        
+
         // Wait for registration to finish before dropping the <script> tag.
-          // Otherwise, the browser will load the script multiple times,
-          // potentially different versions.
-          // var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-          // ADD THIS LINE
-          navigator.serviceWorker.register('/buurtwag/flutter_service_worker.js?v=' + serviceWorkerVersion);
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        // var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        // ADD THIS LINE
+        // navigator.serviceWorker.register('/buurtwag/flutter_service_worker.js?v=' + serviceWorkerVersion);
+
+        navigator.serviceWorker.register('flutter_service_worker.js').then(registration => {
+          firebase.messaging().useServiceWorker(registration)
+        })
       });
     }
   </script>
